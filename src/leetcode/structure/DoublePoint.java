@@ -2,7 +2,7 @@ package leetcode.structure;
 
 import java.util.Stack;
 
-import niuke.list.ListNode;
+import vo.ListNode;
 
 /**
  * https://labuladong.gitbook.io/algo/shu-ju-jie-gou-xi-lie/yuan-di-xiu-gai-shu-zu

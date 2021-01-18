@@ -1,5 +1,7 @@
 package niuke.list;
 
+import vo.ListNode;
+
 public class ListMain {
     public RandomListNode getClone(){
         RandomListNode r1 = new RandomListNode(1);

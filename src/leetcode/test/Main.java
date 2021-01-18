@@ -6,9 +6,8 @@ import java.util.Collections;
 import java.util.List;
 
 import leetcode.structure.DoublePoint;
-import leetcode.structure.RandomizedSet;
 import leetcode.structure.ReverseList;
-import niuke.list.ListNode;
+import vo.ListNode;
 
 public class Main {
     public static void main(String[] args) {

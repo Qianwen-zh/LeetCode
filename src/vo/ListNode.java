@@ -1,4 +1,4 @@
-package niuke.list;
+package vo;
 
 public class ListNode {
     public int val;

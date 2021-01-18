@@ -1,5 +1,7 @@
 package niuke.list;
 
+import vo.ListNode;
+
 import java.util.HashSet;
 import java.util.Set;
 

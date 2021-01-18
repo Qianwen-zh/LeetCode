@@ -1,6 +1,6 @@
 package leetcode.structure;
 
-import niuke.list.ListNode;
+import vo.ListNode;
 
 // 25.K个一组翻转链表（困难）
 // https://labuladong.gitbook.io/algo/shu-ju-jie-gou-xi-lie/shou-ba-shou-shua-lian-biao-ti-mu-xun-lian-di-gui-si-wei/k-ge-yi-zu-fan-zhuan-lian-biao
