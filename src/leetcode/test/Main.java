@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import leetcode.structure.DoublePoint;
-import leetcode.structure.ReverseList;
+import leetcode.commonInterview.TrappRainWater;
+import leetcode.structure.*;
 import vo.ListNode;
 
 public class Main {
@@ -30,36 +30,55 @@ public class Main {
         DoublePoint doublePoint = new DoublePoint();
         // int[] nums = {1, 1, 2};
         // doublePoint.removeDuplicates(nums);
-        ListNode a1 = new ListNode(1);
-        ListNode a12 = new ListNode(1);
-        ListNode a2 = new ListNode(2);
-        ListNode a31 = new ListNode(3);
-        ListNode a32 = new ListNode(3);
-        a1.setNext(a12);
-        a12.setNext(a2);
-        a2.setNext(a31);
-        a31.setNext(a32);
-        doublePoint.deleteDuplicates(a1);
-        String a = doublePoint.removeDuplicateLetters("bcabc");
-
-            List<String> strings = Arrays.asList("6", "1", "3", "1", "2");
-
-            Collections.sort(strings); //sort方法在这里
-
-            for (String string : strings) {
-
-                System.out.println(string);
-            }
-        ListNode b1 = new ListNode(1);
-        ListNode b2 = new ListNode(2);
-        ListNode b3 = new ListNode(3);
-        ListNode b4 = new ListNode(4);
-        ListNode b5 = new ListNode(5);
-        b1.next = b2;
-        b2.next = b3;
-        b3.next = b4;
-        b4.next = b5;
-        ReverseList reverseList = new ReverseList();
-        ListNode cc = reverseList.reverseKGroup(b1, 2);
+//        ListNode a1 = new ListNode(1);
+//        ListNode a12 = new ListNode(1);
+//        ListNode a2 = new ListNode(2);
+//        ListNode a31 = new ListNode(3);
+//        ListNode a32 = new ListNode(3);
+//        a1.setNext(a12);
+//        a12.setNext(a2);
+//        a2.setNext(a31);
+//        a31.setNext(a32);
+//        doublePoint.deleteDuplicates(a1);
+//        String a = doublePoint.removeDuplicateLetters("bcabc");
+//
+//            List<String> strings = Arrays.asList("6", "1", "3", "1", "2");
+//
+//            Collections.sort(strings); //sort方法在这里
+//
+//            for (String string : strings) {
+//
+//                System.out.println(string);
+//            }
+//        ListNode b1 = new ListNode(1);
+//        ListNode b2 = new ListNode(2);
+//        ListNode b3 = new ListNode(3);
+//        ListNode b4 = new ListNode(4);
+//        ListNode b5 = new ListNode(5);
+//        b1.next = b2;
+//        b2.next = b3;
+//        b3.next = b4;
+//        b4.next = b5;
+//        ReverseList reverseList = new ReverseList();
+//        ListNode cc = reverseList.reverseKGroup(b1, 2);
+//        ["LRUCache","put","put","get","put","get","put","get","get","get"]
+//[[2],[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]
+        LFUCache lruCache = new LFUCache(2);
+        lruCache.put(2,2);
+        lruCache.put(1,1);
+        System.out.println(lruCache.get(2));
+        System.out.println(lruCache.get(1));
+        System.out.println(lruCache.get(2));
+        lruCache.put(3,3);
+        lruCache.put(4,4);
+        System.out.println(lruCache.get(3));
+        System.out.println(lruCache.get(2));
+        System.out.println(lruCache.get(1));
+        System.out.println(lruCache.get(4));
+        TrappRainWater trappRainWater = new TrappRainWater();
+        int[] water = {0,1,0,2,1,0,1,3,2,1,2,1};
+//        trappRainWater.trap(water);
+//        LFUCache lfuCache = new LFUCache(10);
+//        lfuCache.
     }
 }

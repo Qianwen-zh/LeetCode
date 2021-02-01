@@ -4,28 +4,28 @@ package leetcode.commonInterview;
 // labuladong 5.3
 public class TrappRainWater {
     //±¸ÍüÂ¼·¨
-//    public int trap(int[] height) {
-//        int n = height.length;
-//        if (n == 0) {
-//            return 0;
-//        }
-//        int[] l_max = new int[n]; // ´æ´¢×ó²à×î¸ß
-//        int[] r_max = new int[n]; // ´æ´¢ÓÒ²à×î¸ß
-//        l_max[0] = height[0];
-//        r_max[n-1] = height[n - 1];
-//        for (int i = 1; i < n; i++) {
-//            l_max[i] = Math.max(l_max[i - 1], height[i]);
-//        }
-//        for (int i = n-2; i >= 0; i--) {
-//            r_max[i] = Math.max(r_max[i + 1], height[i]);
-//        }
-//        int sum = 0;
-//        for (int i = 1; i < n; i++) {
-//            sum += Math.min(l_max[i], r_max[i]) - height[i];
-//        }
-//        System.out.println(sum);
-//        return sum;
-//    }
+    public int trap1(int[] height) {
+        int n = height.length;
+        if (n == 0) {
+            return 0;
+        }
+        int[] l_max = new int[n]; // ´æ´¢×ó²à×î¸ß
+        int[] r_max = new int[n]; // ´æ´¢ÓÒ²à×î¸ß
+        l_max[0] = height[0];
+        r_max[n-1] = height[n - 1];
+        for (int i = 1; i < n; i++) {
+            l_max[i] = Math.max(l_max[i - 1], height[i]);
+        }
+        for (int i = n-2; i >= 0; i--) {
+            r_max[i] = Math.max(r_max[i + 1], height[i]);
+        }
+        int sum = 0;
+        for (int i = 1; i < n; i++) {
+            sum += Math.min(l_max[i], r_max[i]) - height[i];
+        }
+        System.out.println(sum);
+        return sum;
+    }
     // Ë«Ö¸Õë·¨
     public int trap(int[] height) {
         int n = height.length;
