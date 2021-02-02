@@ -65,9 +65,6 @@ public class LFUCache {
         }
     }
 
-    // private void removeNode(Node node, int key) {
-    //     if(node.key)
-    // }
     private void addNodeForFreqList(int key, int newFreq) {
         keyToFreq.put(key, newFreq);
         LinkedHashSet<Integer> newLink;
