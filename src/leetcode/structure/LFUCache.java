@@ -11,12 +11,13 @@ public class LFUCache {
     Map<Integer, LinkedHashSet<Integer>> freqToKeys = new HashMap<>();
     int cap = 0;
     int minFreq = 1;
+
     public LFUCache(int capacity) {
         this.cap = capacity;
     }
 
     public int get(int key) {
-        if(!keyToVal.containsKey(key)) {
+        if (!keyToVal.containsKey(key)) {
             return -1;
         }
         updateFreq(key);
@@ -35,7 +36,7 @@ public class LFUCache {
             updateFreq(key);
             return;
         }
-        if(cap ==0){
+        if (cap == 0) {
             return;
         }
         // 判断容量超出
@@ -49,7 +50,7 @@ public class LFUCache {
         }
         // 直接插入
         keyToVal.put(key, value);
-        minFreq =  1;
+        minFreq = 1;
         addNodeForFreqList(key, 1);
     }
 
@@ -63,6 +64,7 @@ public class LFUCache {
             minFreq++;
         }
     }
+
     // private void removeNode(Node node, int key) {
     //     if(node.key)
     // }
